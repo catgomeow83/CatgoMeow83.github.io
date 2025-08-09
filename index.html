@@ -4,7 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>World of Cats</title>
-  <style>
+  <style><style>
+  body {
+    background: radial-gradient(ellipse at center, #1a001a 0%, #000000 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background:
+      radial-gradient(white 1px, transparent 1px),
+      radial-gradient(white 1px, transparent 1px);
+    background-position: 0 0, 50px 50px;
+    background-size: 100px 100px;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.8;
+  }
+</style>
     body {
       background-color: #f5f0e6;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
